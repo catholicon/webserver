@@ -1,4 +1,4 @@
-package test.com.adobe.http;
+package com.adobe.http;
 
 import static org.junit.Assert.assertNotEquals;
 
@@ -9,6 +9,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import com.adobe.logutils.MyLogger;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -23,7 +24,7 @@ import com.adobe.server.WebServer;
  */
 public class WebServerTest extends TestCase {		
 	
-		Logger log = Logger.getLogger(this.getClass().getSimpleName());	
+		Logger log = MyLogger.getLogger(this.getClass().getSimpleName());
 	    private static String host = "127.0.0.1";
 	    private static int port = 50001;
 	    private static boolean running = false;
